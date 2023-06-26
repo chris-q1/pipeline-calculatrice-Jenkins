@@ -44,12 +44,12 @@ pipeline {
                     archiveArtifacts "${env.BUILD_ID}/sources/dist/prog"
                 }
             }
-            stage('Branch') {
+        }
+        stage('Branch') {
             agent any
             steps {
                 echo 'main branch'
             }
-        }
         }
     }
 }
